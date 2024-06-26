@@ -19,10 +19,8 @@ import { EmailProcessor } from './app.processor';
         redis: {
           username: configService.get<string>('REDIS_USER'),
           password: configService.get<string>('REDIS_PASS'),
-          tls: {
-            host: configService.get<string>('REDIS_HOST'),
-            port: Number(configService.get<string>('REDIS_PORT')) || 6379,
-          },
+          host: configService.get<string>('REDIS_HOST'),
+          port: Number(configService.get<string>('REDIS_PORT')) || 6379,
         },
       }),
       inject: [ConfigService],
